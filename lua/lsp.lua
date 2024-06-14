@@ -1,7 +1,7 @@
 
 local lsp_zero = require('lsp-zero')
 
-lsp_zero.on_attach(function (client, bufnr) 
+lsp_zero.on_attach(function (client, bufnr)
   -- see :help lsp-zero-keybindings
   -- to learn the avaible actions
   lsp_zero.default_keymaps({buffer = bufnr})
@@ -14,6 +14,8 @@ require('mason-lspconfig').setup({
     function(server_name)
       require('lspconfig')[server_name].setup({})
     end,
+
+    jdtls = lsp_zero.noop,
   }
 })
 
@@ -37,7 +39,7 @@ cmp.setup({
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
   }),
   snippet = {
-    expand = function(args) 
+    expand = function(args)
       require('luasnip').lsp_expand(args.body)
     end,
   }
