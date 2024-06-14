@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
 
   -- auto pairs
   use 'jiangmiao/auto-pairs'
+  -- use 'LunarWatcher/auto-pairs'
 
   -- lightline
   use 'itchyny/lightline.vim'
@@ -18,9 +19,6 @@ return require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     { run = ':TSUpdate' }
   )
-
-  -- tokyonigth
-  use 'folke/tokyonight.nvim'
 
   -- lsp
   use {
@@ -42,31 +40,34 @@ return require('packer').startup(function(use)
     }
   }
 
-  -- neo-tree
---  use {
---    'nvim-neo-tree/neo-tree.nvim',
---    branch = 'v3.x',
---    requires = {
---      'nvim-lua/plenary.nvim',
---      -- 'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
---      'MunifTanjim/nui.nvim',
---      -- '3rd/image.nvim', -- Optional image support in preview window: See `# Preview Mode` for more information
---    }
---  }
-
   -- nerdtree
   use 'preservim/nerdtree'
 
   -- nerdtree git
   use 'Xuyuanp/nerdtree-git-plugin'
 
-  -- nerdtree project
-  -- use 'scrooloose/nerdtree-project-plugin'
-
-  -- nvim tree
-  -- use 'nvim-tree/nvim-tree.lua'
-
   -- git status on file
   use 'airblade/vim-gitgutter'
+
+  -- indent blankline
+  use 'lukas-reineke/indent-blankline.nvim'
+
+  -- close tags
+  use 'windwp/nvim-ts-autotag'
+
+  -- vim sorround
+  use 'tpope/vim-surround'
+
+  -- smart column
+  use 'm4xshen/smartcolumn.nvim'
+
+  -- lsp diagnostic indicator
+  use 'spywhere/lightline-lsp'
+
+  -- onedarkpro
+  use 'olimorris/onedarkpro.nvim'
+
+  -- java - lsp
+  use 'mfussenegger/nvim-jdtls'
 end)
 
