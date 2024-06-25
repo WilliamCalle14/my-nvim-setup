@@ -69,5 +69,14 @@ return require('packer').startup(function(use)
 
   -- java - lsp
   use 'mfussenegger/nvim-jdtls'
+
+  -- goto preview
+  use 'rmagatti/goto-preview'
+
+  -- telescope
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.8',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  }
 end)
 

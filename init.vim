@@ -28,6 +28,9 @@ lua require('ts_autotag')
 " smart column
 lua require('smartcolumn_conf')
 
+" goto preview
+lua require('goto_preview_conf')
+
 colorscheme onedark
 syntax on
 
