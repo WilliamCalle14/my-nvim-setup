@@ -46,3 +46,5 @@ set nolist
 
 autocmd FileType html,css,javascript,javascriptreact,typescript,typescriptreact,lua setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab autoindent
 
+au InsertLeave * let @/ = ''
+
